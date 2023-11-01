@@ -1,5 +1,6 @@
 package springSearch;
 
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -76,7 +77,8 @@ public class searchController {
 		
 //		We have to upload file on server
 		
-		String path = s.getServletContext().getRealPath("/") + "WEB-INF" + File.separator + "resources";
+//		String path = s.getServletContext().getRealPath("/") + "WEB-INF" + File.separator + "resources" + File.separator + "css" +File.separator + UserDropFile.getOriginalFilename();
+		String path = "C:\\files" + File.separator + UserDropFile.getOriginalFilename();
 		System.out.println(path);
 		try {
 			FileOutputStream fos = new FileOutputStream(path);
@@ -86,7 +88,7 @@ public class searchController {
 		} catch (IOException e) {
 			
 			e.printStackTrace();
-			System.out.println("Upload Failed..");
+			System.out.println(e);
 		}
 		
 		
